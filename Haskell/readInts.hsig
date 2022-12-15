@@ -1,0 +1,8 @@
+readInts :: IO [Int]
+readInts = fmap (fmap read . words) getLine
+
+main = do
+    x <- readInts
+    y <- readInts
+    print(x)
+    print(y)

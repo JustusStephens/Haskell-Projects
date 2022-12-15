@@ -1,0 +1,12 @@
+readInts :: IO [Int]
+readInts = fmap (fmap read . words) getLine
+
+intList2Int :: [Int] -> Int
+intList2Int (x:xs) = x
+
+factorial :: Int -> Int -> Int -> Int
+factorial _ 0 sum = sum
+factorial x y sum = factorial y (y-1) (sum*y)
+main = do
+    num <- readInts
+    print (factorial (intList2Int(num)) (intList2Int(num)-1) 0)

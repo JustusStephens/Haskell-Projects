@@ -1,0 +1,2 @@
+gcc -o mReview mainReview.c -Wall
+./mReview 
